@@ -1,5 +1,5 @@
 //==========================================================
-// cocktailTest            CC3.0 BY-SA-NC   surasto.de
+// cocktailTest            CC3.0 BY-SA-NC   c-hack.de
 //==========================================================
   
 JSONObject pumpMap;
@@ -10,7 +10,8 @@ int moveX;//Beweg.ges.
 int x,mouseStart,xStart;
 
 void setup() {
-    fullScreen();
+    //fullScreen();
+    size(1200,800);
     stroke(0,0,0);
     modus = 0;
     moveX=0;
