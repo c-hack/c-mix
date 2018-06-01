@@ -1,0 +1,44 @@
+[
+  [
+    {"DrinkName": "Cuba Libre1", "Bild": "cuba.png"},
+    {"Zutat": "Cola", "Menge": 3},
+    {"Zutat": "Rum", "Menge": 4},
+  ],
+  [
+    { "DrinkName": "Caipirinha", "Bild": "caipi.png"},
+    { "Zutat": "Grapefruitsaft", "Menge": 2},
+    { "Zutat": "Wodka", "Menge": 6}
+  ],
+    [
+    { "DrinkName": "Bloody Mary", "Bild": "caipi.png"},
+    { "Zutat": "Grapefruitsaft", "Menge": 20},
+    { "Zutat": "Wodka", "Menge": 6},
+    { "Zutat": "RUM", "Menge": 6,}
+  ],
+  [
+    {"DrinkName": "Cuba Libre2", "Bild": "cuba.png"},
+    {"Zutat": "Cola", "Menge": 3},
+    {"Zutat": "Rum", "Menge": 4},
+  ],
+  [
+    {"DrinkName": "Cuba Libre3", "Bild": "cuba.png"},
+    {"Zutat": "Cola", "Menge": 3},
+    {"Zutat": "Rum", "Menge": 4},
+  ],
+  [
+    {"DrinkName": "Cuba Libre4", "Bild": "cuba.png"},
+    {"Zutat": "Cola", "Menge": 3},
+    {"Zutat": "Rum", "Menge": 4},
+  ],
+  [
+    {"DrinkName": "Cuba Libre5", "Bild": "caipi.png"},
+    {"Zutat": "Cola", "Menge": 3},
+    {"Zutat": "Rum", "Menge": 4},
+  ],
+  [
+    {"DrinkName": "Cuba Libre6", "Bild": "cuba.png"},
+    {"Zutat": "Cola", "Menge": 3},
+    {"Zutat": "Rum", "Menge": 4},
+  ]
+]
+
