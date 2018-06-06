@@ -1,44 +1,49 @@
 [
   [
-    {"DrinkName": "Cuba Libre1", "Bild": "cuba.png"},
-    {"Zutat": "Cola", "Menge": 3},
-    {"Zutat": "Rum", "Menge": 4},
-  ],
+    {"DrinkName": "Barcadi" , "Bild": "barcadi.png"},
+    {"Zutat": "Rum", "Menge": 4.5},
+    {"Zutat": "Limettensaft", "Menge": 2},
+    {"Zutat": "Grenadine", "Menge":0.5},
+  ]
   [
-    { "DrinkName": "Caipirinha", "Bild": "caipi.png"},
-    { "Zutat": "Grapefruitsaft", "Menge": 2},
-    { "Zutat": "Wodka", "Menge": 6}
-  ],
-    [
-    { "DrinkName": "Bloody Mary", "Bild": "caipi.png"},
-    { "Zutat": "Grapefruitsaft", "Menge": 20},
-    { "Zutat": "Wodka", "Menge": 6},
-    { "Zutat": "RUM", "Menge": 6,}
-  ],
+    {"DrinkName": "Para Cuba" , "Bild": "paracuba.png"},
+    {"Zutat": "Rum", "Menge" :6},
+    {"Zutat": "Limettensaft", "Menge" : 4.5},
+    {"Zutat": "Grenadine" , "Menge" : 0.3},
+    {"Zutat": "Ananassaft" , "Menge" : 6},
+  ]
   [
-    {"DrinkName": "Cuba Libre2", "Bild": "cuba.png"},
-    {"Zutat": "Cola", "Menge": 3},
-    {"Zutat": "Rum", "Menge": 4},
-  ],
+    {"DrinkName": "Havana Cooler" , "Bild": "havanacooler.pgn"},
+    {"Zutat": "Rum", "Menge" :1.4 },
+    {"Zutat": "Ginger Ale", "Menge": 6.2}
+  ]
   [
-    {"DrinkName": "Cuba Libre3", "Bild": "cuba.png"},
-    {"Zutat": "Cola", "Menge": 3},
-    {"Zutat": "Rum", "Menge": 4},
-  ],
+    {"DrinkName": "Havana Beach" , "Bild" : "havanabeach.pgn"}
+    {"Zutat": "Rum" , "Menge" : 3.3}
+    {"Zutat": "Limettensaft", "Menge" : 3.3}
+    {"Zutat": "Ananassaft" , "Menge" : 6.6}
+    {"Zutat": "Ginger Ale" , "Menge" : 6.6}
+  ]
   [
-    {"DrinkName": "Cuba Libre4", "Bild": "cuba.png"},
-    {"Zutat": "Cola", "Menge": 3},
-    {"Zutat": "Rum", "Menge": 4},
-  ],
+    {"DrinkName": "Bahama Bay" , "Bild": "bahamabay.pgn"}
+    {"Zutat": "Rum" , "Menge" : 5}
+    {"Zutat": "Orangensaft" , "Menge" : 7.5}
+    {"Zutat": "Ananassaft" , "Menge" : 7.5}
+    {"Zutat": "Grenadine" , "Menge" : 0.3}
+  ]
   [
-    {"DrinkName": "Cuba Libre5", "Bild": "caipi.png"},
-    {"Zutat": "Cola", "Menge": 3},
-    {"Zutat": "Rum", "Menge": 4},
-  ],
+    {"Drinkname": "Bloody Screwdriver" , "Bild": "bloodyscrewdriver"}
+    {"Zutat": "Wodka" , "Menge" : 9}
+    {"Zutat": "Orangensaft" , "Menge" : 4}
+    {"zutat": "Grenadine" , "Menge" : 0.1}
+  ]
   [
-    {"DrinkName": "Cuba Libre6", "Bild": "cuba.png"},
-    {"Zutat": "Cola", "Menge": 3},
-    {"Zutat": "Rum", "Menge": 4},
+    {"Drinkname": " Hawaiian Vodka" , "Bild" : "hawaiianvodka"}
+    {"Zutat": "Grenadine" , "Menge" :0.1}
+    {"Zutat": "Orangensaft" , "Menge" : 3}
+    {"Zutat": "Limettensaft" , "Menge" : 3}
+    {"Zutat": "Ananassaft" , "Menge" : 3}
+    {"Zutat": "Wodka" , "Menge" : 8}
   ]
 ]
 
