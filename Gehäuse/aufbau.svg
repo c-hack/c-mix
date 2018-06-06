@@ -14,7 +14,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg4581"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="aufbau.svg">
   <defs
      id="defs4575" />
@@ -25,17 +25,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.72819698"
-     inkscape:cx="830.05155"
-     inkscape:cy="-37.779878"
+     inkscape:zoom="0.34754096"
+     inkscape:cx="1509.1968"
+     inkscape:cy="-1091.9313"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1366"
-     inkscape:window-height="745"
+     inkscape:window-height="715"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:measure-start="1454.74,-1147.51"
+     inkscape:measure-end="1511.71,-1145.48" />
   <metadata
      id="metadata4578">
     <rdf:RDF>
@@ -201,5 +203,29 @@
        d="m 294.96622,395.07291 a 4.8921696,3.6724788 0 0 0 -4.89233,3.67262 4.8921696,3.6724788 0 0 0 10e-4,0.0198 h -0.002 v 37.49229 h 5.2e-4 a 4.8921696,3.6724788 0 0 0 4.89232,3.66949 4.8921696,3.6724788 0 0 0 4.89233,-3.66949 h 0.0689 v -37.49229 h -0.0704 a 4.8921696,3.6724788 0 0 0 0.002,-0.0198 4.8921696,3.6724788 0 0 0 -4.89232,-3.67262 z"
        id="rect3848-3-4"
        inkscape:connector-curvature="0" />
+    <circle
+       id="path32"
+       cx="392.52753"
+       cy="617.5"
+       style="stroke-width:0.0076252"
+       r="2" />
+    <circle
+       id="path32-5"
+       cx="440.03207"
+       cy="295"
+       style="stroke-width:0.0076252"
+       r="2" />
+    <circle
+       id="path32-9"
+       cx="392.83139"
+       cy="745"
+       style="stroke-width:0.0076252"
+       r="2" />
+    <circle
+       id="path32-4"
+       cx="392.5"
+       cy="490"
+       style="stroke-width:0.0076252"
+       r="2" />
   </g>
 </svg>
