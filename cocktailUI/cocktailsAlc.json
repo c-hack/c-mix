@@ -1,6 +1,6 @@
 [
   [
-    {"DrinkName": "Barcadi 2.0" , "Bild": "barcadi.png"},
+    {"DrinkName": "Bacardi 2.0" , "Bild": "bacardi.png"},
     {"Zutat": "Rum", "Menge": 4.5},
     {"Zutat": "Limettensaft", "Menge": 2},
     {"Zutat": "Grenadine", "Menge":0.5},
