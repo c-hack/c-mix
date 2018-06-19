@@ -15,7 +15,7 @@
    version="1.1"
    id="svg4581"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="aufbau.svg">
+   sodipodi:docname="aufbau2.svg">
   <defs
      id="defs4575" />
   <sodipodi:namedview
@@ -229,21 +229,21 @@
        id="path32"
        cx="99.953758"
        cy="323.92987"
-       style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;stroke:#000000;fill:none"
        r="2"
        transform="rotate(-90)" />
     <circle
        id="path32-9"
        cx="100.25762"
        cy="451.42987"
-       style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+       style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;stroke:#000000;fill:none"
        r="2"
        transform="rotate(-90)" />
     <circle
        id="path32-4"
        cx="99.926231"
        cy="196.42989"
-       style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;stroke:none;fill:none"
+       style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;stroke:#000000;fill:none"
        r="2"
        transform="rotate(-90)" />
     <rect
