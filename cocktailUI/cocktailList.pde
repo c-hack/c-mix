@@ -33,7 +33,7 @@ class cocktailList {
     for (int i=0; (i<rezeptListe.size())&&(i<8); i++) {
       rezept = rezeptListe.getJSONArray(i);
       cocktailHeader = rezept.getJSONObject(0);
-      fill(0, 0, 0);
+      fill(255);
       textSize(width/40);
       textAlign(CENTER,TOP);
       text(cocktailHeader.getString("DrinkName"), xpos+xph/2+xOffset, ypos+yph); 
@@ -69,19 +69,20 @@ class cocktailList {
       cocktailHeader = rezept.getJSONObject(0);
       //println("Cocktail: ",cocktailHeader.getString("DrinkName"));
        
-       bild=loadImage("margarita.jpg");
+       /**/bild=loadImage(cocktailHeader.getString("Bild"));
        image(bild,bildxpos,bildypos,bildsizex,bildsizey);
   
        //Drinkname
        drinknamex=width/20;
        drinknamey=height/5;
        textSize(width/15);
-       text("Caipirihna",drinknamex,drinknamey);
+       text(cocktailHeader.getString("DrinkName"),drinknamex,drinknamey);
   
        //Zutat
        textSize(width/25);
-       for(int i=0;i<3;i++){
-        text("Gsaft",2*drinknamex,j*drinknamey);
+       for(int i=1;i<rezept.size();i++){
+        cocktailZutat = rezept.getJSONObject(i);
+        text(cocktailZutat.getString("Zutat"),2*drinknamex,j*drinknamey);
         j=j+0.5;
        }
   
@@ -98,51 +99,30 @@ class cocktailList {
       text("Abbrechen",rectx,recty+width/40);
        }
   
+  
+  
   // Liefert den index des gewählten Cocktails 0...n ; -1 bedeutet Abbruch
-  int getNrClicked(int xOffset) {
-    // hier checken wir, welcher der Cocktails angeklickt wurde
-    // Nur sinnvoll, wenn wir in der Übersichtsanzeige sind.
+  int getNrClicked() {
+
     float xpos,ypos;
     int bildnummer=-1,i;
     
     xpos=width/20;
     ypos=height/10;
     for(i=0;(i<rezeptListe.size()) && (i<8);i++) {
-      if((mouseX>xpos+xOffset) && (mouseX<xpos+xOffset+xph) && (mouseY<ypos+yph)) bildnummer=1;
+      if((mouseX>xpos) && (mouseX<xpos+xph) && (mouseY<ypos+yph) && (mouseY>ypos)) bildnummer=i;
       xpos=xpos+width/4;
       
-      if(i==3) { ypos=height/2;xpos=width/20;}
+      if(i==3) { ypos=height/2; xpos=width/20;}
     }
     
     return bildnummer;
   }
-   void mouseClicked(int xOffset){
-    
-     int x1,x2=0,a,i;
- 
-    float xpos,ypos;
-    
-    
-    xpos=width/20;
-    ypos=height/10;
-    for(i=0;(i<rezeptListe.size()) && (i<8);i++) {
-      if((mouseX>xpos+xOffset) && (mouseX<xpos+xOffset+xph) && (mouseY<ypos+yph)) println(i);
-      xpos=xpos+width/4;
-      
-      if(i==3) { ypos=height/2;xpos=width/20;}
- }
-
- 
-
- }
   
  
- 
- 
-
   // Hier wird gecheckt, ob entweder der MIX button (return 1) oder Abbruch (return 0) 
   // gedrückt wurde 
   int getButtonClicked() {
     return 0;
   }
-   }
+}
