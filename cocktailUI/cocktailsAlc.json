@@ -35,7 +35,7 @@
     {"DrinkName": "Bloody Screwdriver" , "Bild": "bloodyscrewdriver.png"},
     {"Zutat": "Wodka" , "Menge" : 9},
     {"Zutat": "Orangensaft" , "Menge" : 4},
-    {"zutat": "Grenadine" , "Menge" : 0.1},
+    {"Zutat": "Grenadine" , "Menge" : 0.1},
   ],
   [
     {"DrinkName": " Hawaiian Vodka" , "Bild" : "hawaiianvodka.png"},

@@ -69,7 +69,7 @@ class cocktailList {
       cocktailHeader = rezept.getJSONObject(0);
       //println("Cocktail: ",cocktailHeader.getString("DrinkName"));
        
-       /**/bild=loadImage(cocktailHeader.getString("Bild"));
+       /**/bild=loadImage("pics/"+cocktailHeader.getString("Bild"));
        image(bild,bildxpos,bildypos,bildsizex,bildsizey);
   
        //Drinkname
