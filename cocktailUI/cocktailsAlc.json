@@ -1,49 +1,56 @@
 [
   [
-    {"DrinkName": "Barcadi" , "Bild": "barcadi.png"},
+    {"DrinkName": "Barcadi 2.0" , "Bild": "barcadi.png"},
     {"Zutat": "Rum", "Menge": 4.5},
     {"Zutat": "Limettensaft", "Menge": 2},
     {"Zutat": "Grenadine", "Menge":0.5},
-  ]
+  ],
   [
     {"DrinkName": "Para Cuba" , "Bild": "paracuba.png"},
     {"Zutat": "Rum", "Menge" :6},
     {"Zutat": "Limettensaft", "Menge" : 4.5},
     {"Zutat": "Grenadine" , "Menge" : 0.3},
     {"Zutat": "Ananassaft" , "Menge" : 6},
-  ]
+  ],
   [
-    {"DrinkName": "Havana Cooler" , "Bild": "havanacooler.pgn"},
+    {"DrinkName": "Havana Cooler" , "Bild": "havanacooler.png"},
     {"Zutat": "Rum", "Menge" :1.4 },
-    {"Zutat": "Ginger Ale", "Menge": 6.2}
-  ]
+    {"Zutat": "Ginger Ale", "Menge": 6.2},
+  ],
   [
-    {"DrinkName": "Havana Beach" , "Bild" : "havanabeach.pgn"}
-    {"Zutat": "Rum" , "Menge" : 3.3}
-    {"Zutat": "Limettensaft", "Menge" : 3.3}
-    {"Zutat": "Ananassaft" , "Menge" : 6.6}
-    {"Zutat": "Ginger Ale" , "Menge" : 6.6}
-  ]
+    {"DrinkName": "Havana Beach" , "Bild" : "havanabeach.png"},
+    {"Zutat": "Rum" , "Menge" : 3.3},
+    {"Zutat": "Limettensaft", "Menge" : 3.3},
+    {"Zutat": "Ananassaft" , "Menge" : 6.6},
+    {"Zutat": "Ginger Ale" , "Menge" : 6.6},
+  ],
   [
-    {"DrinkName": "Bahama Bay" , "Bild": "bahamabay.pgn"}
-    {"Zutat": "Rum" , "Menge" : 5}
-    {"Zutat": "Orangensaft" , "Menge" : 7.5}
-    {"Zutat": "Ananassaft" , "Menge" : 7.5}
-    {"Zutat": "Grenadine" , "Menge" : 0.3}
-  ]
+    {"DrinkName": "Bahama Bay" , "Bild": "bahamabay.png"},
+    {"Zutat": "Rum" , "Menge" : 5},
+    {"Zutat": "Orangensaft" , "Menge" : 7.5},
+    {"Zutat": "Ananassaft" , "Menge" : 7.5},
+    {"Zutat": "Grenadine" , "Menge" : 0.3},
+  ],
   [
-    {"Drinkname": "Bloody Screwdriver" , "Bild": "bloodyscrewdriver"}
-    {"Zutat": "Wodka" , "Menge" : 9}
-    {"Zutat": "Orangensaft" , "Menge" : 4}
-    {"zutat": "Grenadine" , "Menge" : 0.1}
-  ]
+    {"Drinkname": "Bloody Screwdriver" , "Bild": "bloodyscrewdriver.png"},
+    {"Zutat": "Wodka" , "Menge" : 9},
+    {"Zutat": "Orangensaft" , "Menge" : 4},
+    {"zutat": "Grenadine" , "Menge" : 0.1},
+  ],
   [
-    {"Drinkname": " Hawaiian Vodka" , "Bild" : "hawaiianvodka"}
-    {"Zutat": "Grenadine" , "Menge" :0.1}
-    {"Zutat": "Orangensaft" , "Menge" : 3}
-    {"Zutat": "Limettensaft" , "Menge" : 3}
-    {"Zutat": "Ananassaft" , "Menge" : 3}
-    {"Zutat": "Wodka" , "Menge" : 8}
+    {"Drinkname": " Hawaiian Vodka" , "Bild" : "hawaiianvodka.png"},
+    {"Zutat": "Grenadine" , "Menge" :0.1},
+    {"Zutat": "Orangensaft" , "Menge" : 3},
+    {"Zutat": "Limettensaft" , "Menge" : 3},
+    {"Zutat": "Ananassaft" , "Menge" : 3},
+    {"Zutat": "Wodka" , "Menge" : 8},
+  ],
+  [
+    {"Drinkname": "PiGiVo" , "Bild" : "pigivo.png"},
+    {"Zutat" : "Ananassaft" , "Menge" : 6},
+    {"Zutat" : "Ginger Ale" , "Menge" : 6},
+    {"zutat" : "Wodka" , "Menge" : 3.5},
+    {"Zutat" : "Orangensaft" , "Menge" : 1.5},
   ]
 ]
 
