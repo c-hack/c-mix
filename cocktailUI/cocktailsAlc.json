@@ -32,13 +32,13 @@
     {"Zutat": "Grenadine" , "Menge" : 0.3},
   ],
   [
-    {"Drinkname": "Bloody Screwdriver" , "Bild": "bloodyscrewdriver.png"},
+    {"DrinkName": "Bloody Screwdriver" , "Bild": "bloodyscrewdriver.png"},
     {"Zutat": "Wodka" , "Menge" : 9},
     {"Zutat": "Orangensaft" , "Menge" : 4},
     {"zutat": "Grenadine" , "Menge" : 0.1},
   ],
   [
-    {"Drinkname": " Hawaiian Vodka" , "Bild" : "hawaiianvodka.png"},
+    {"DrinkName": " Hawaiian Vodka" , "Bild" : "hawaiianvodka.png"},
     {"Zutat": "Grenadine" , "Menge" :0.1},
     {"Zutat": "Orangensaft" , "Menge" : 3},
     {"Zutat": "Limettensaft" , "Menge" : 3},
@@ -46,7 +46,7 @@
     {"Zutat": "Wodka" , "Menge" : 8},
   ],
   [
-    {"Drinkname": "PiGiVo" , "Bild" : "pigivo.png"},
+    {"DrinkName": "PiGiVo" , "Bild" : "pigivo.png"},
     {"Zutat" : "Ananassaft" , "Menge" : 6},
     {"Zutat" : "Ginger Ale" , "Menge" : 6},
     {"zutat" : "Wodka" , "Menge" : 3.5},

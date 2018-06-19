@@ -18,7 +18,7 @@ class cocktailList {
     for (int i=0; (i<rezeptListe.size())&&(i<8); i++) {
       rezept = rezeptListe.getJSONArray(i);
       cocktailHeader = rezept.getJSONObject(0);
-      photo[i]=loadImage(cocktailHeader.getString("Bild"));
+      photo[i]=loadImage("pics/"+cocktailHeader.getString("Bild"));
     }
   }
 

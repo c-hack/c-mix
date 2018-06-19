@@ -10,8 +10,8 @@ class cocktailTitle {
   
     background(73,94,105);
     //background(100);
-    photo=loadImage("HomeC.jpg");
-    bildT=loadImage("Logo.png");
+
+    bildT=loadImage("pics/Logo.png");
  
     xbildA=width-xsizeBild-width/16;
     ybildA=height/2+ysizeBild/2;
