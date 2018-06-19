@@ -2,7 +2,7 @@
 class cocktailTitle {
   
    PImage photo;
-   float xsizeBild=200,ysizeBild=200;
+   float xsizeBild=100,ysizeBild=100;
    float xbildA,ybildA;
    float xbildN,ybildN;
   
@@ -21,19 +21,19 @@ class cocktailTitle {
 
   void display(int xOffset){
   
-    textSize(170);
+    textSize(width/10);
     textAlign(CENTER,CENTER);
     text("C-MIX",width/2+xOffset,height/2);
   
     //Alkohol
     image(photo,xbildA+xOffset,ybildA,xsizeBild,ysizeBild);
-    textSize(45);
+    textSize(width/30);
     //textAlign(CENTER,CENTER);
     text("Alkohol",xbildA+xsizeBild/2+xOffset,ybildA+ysizeBild);
   
     //Alkoholfrei
     image(photo,xbildN+xOffset,ybildN,xsizeBild,ysizeBild);
-    textSize(45);
+    textSize(width/30);
     //textAlign(CENTER,CENTER);
     text("Alkoholfrei",xbildN+xsizeBild/2+xOffset,ybildN+ysizeBild);
   }
