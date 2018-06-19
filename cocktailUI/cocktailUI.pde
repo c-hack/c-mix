@@ -72,7 +72,7 @@ void mouseReleased() {
       modus=1;
       
     }
-    if((i>-1) && (point==1){
+    if((i>-1) && (point==1)){
         cocktailsAlc.setFocus(i);
         modus=1;
     }
