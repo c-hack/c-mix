@@ -8,12 +8,21 @@ class cocktailList {
   int xpos,ypos;
   PImage[] photo = new PImage[8];
   float xph,yph;
+  float bildxpos,bildypos,bildsizex,bildsizey;
+  
+     
 
   cocktailList(String filename) {
      rezeptListe = loadJSONArray(filename);  
      cocktailInFocus = 0;
-     xph=height/4;   //Bildgröße für Icon
-     yph=height/4;
+     xph=height/3.5;   //Bildgröße für Icon
+     yph=height/3.5;
+     
+      bildsizex=width/2.5;     //Cocktail display
+      bildsizey=width/2.5;
+      bildxpos=width/2+bildsizex/4;
+      bildypos=height/4.5;
+     
 
     for (int i=0; (i<rezeptListe.size())&&(i<8); i++) {
       rezept = rezeptListe.getJSONArray(i);
@@ -34,7 +43,7 @@ class cocktailList {
       rezept = rezeptListe.getJSONArray(i);
       cocktailHeader = rezept.getJSONObject(0);
       fill(255);
-      textSize(width/40);
+      textSize(width/42);
       textAlign(CENTER,TOP);
       text(cocktailHeader.getString("DrinkName"), xpos+xph/2+xOffset, ypos+yph); 
       image(photo[i],xpos+xOffset,ypos,xph,yph);
@@ -51,42 +60,36 @@ class cocktailList {
   
   // Zeigt den Cocktail im Fokus an
   // ToDo: Grafische Darstellung mit Bild und liste der Zutaten
-  void display() {
+  void display(int yOffset) {
       PImage bild;
-      float bildsizex,bildsizey;
-      float bildxpos,bildypos;
+      
       float drinknamex,drinknamey;
       float j=2;
       float rectx,recty;
 
-     //Cockt. Bild
-      bildsizex=width/3;
-      bildsizey=width/3;
-      bildxpos=width/2+bildsizex/4;;
-      bildypos=height/4;
-  
-      rezept = rezeptListe.getJSONArray(cocktailInFocus);
+       rezept = rezeptListe.getJSONArray(cocktailInFocus);
       cocktailHeader = rezept.getJSONObject(0);
       //println("Cocktail: ",cocktailHeader.getString("DrinkName"));
        
        /**/bild=loadImage("pics/"+cocktailHeader.getString("Bild"));
-       image(bild,bildxpos,bildypos,bildsizex,bildsizey);
+       image(bild,bildxpos,bildypos+yOffset,bildsizex,bildsizey);
   
        //Drinkname
-       drinknamex=width/20;
+       drinknamex=width/4;
        drinknamey=height/5;
-       textSize(width/15);
-       text(cocktailHeader.getString("DrinkName"),drinknamex,drinknamey);
+       fill(255);
+       textSize(width/20);
+       text(cocktailHeader.getString("DrinkName"),drinknamex,drinknamey+yOffset);
   
        //Zutat
-       textSize(width/25);
+       textSize(width/27);
        for(int i=1;i<rezept.size();i++){
         cocktailZutat = rezept.getJSONObject(i);
-        text(cocktailZutat.getString("Zutat"),2*drinknamex,j*drinknamey);
+        text(cocktailZutat.getString("Zutat"),drinknamex,j*drinknamey+yOffset);
         j=j+0.5;
        }
   
-      //Abbrechen Knöpf
+      /*//Abbrechen Knöpf
       rectx=width/20;
       recty=8*height/10;
       noStroke();
@@ -96,7 +99,7 @@ class cocktailList {
       //Text
       fill(255);
       textSize(width/25);
-      text("Abbrechen",rectx,recty+width/40);
+      text("Abbrechen",rectx,recty+width/40);*/
        }
   
   
@@ -119,7 +122,14 @@ class cocktailList {
     return bildnummer;
   }
   
- 
+ boolean Bildclicked(){
+   
+       if((mouseX>bildxpos) && (mouseX<bildxpos+bildsizex) && (mouseY<bildypos+bildsizey) && (mouseY>bildypos)) return true;
+       else return false;
+       
+      
+   
+ }
   // Hier wird gecheckt, ob entweder der MIX button (return 1) oder Abbruch (return 0) 
   // gedrückt wurde 
   int getButtonClicked() {

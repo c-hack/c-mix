@@ -49,7 +49,7 @@
     {"DrinkName": "PiGiVo" , "Bild" : "pigivo.png"},
     {"Zutat" : "Ananassaft" , "Menge" : 6},
     {"Zutat" : "Ginger Ale" , "Menge" : 6},
-    {"zutat" : "Wodka" , "Menge" : 3.5},
+    {"Zutat" : "Wodka" , "Menge" : 3.5},
     {"Zutat" : "Orangensaft" , "Menge" : 1.5},
   ]
 ]

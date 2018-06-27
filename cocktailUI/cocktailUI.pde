@@ -6,9 +6,9 @@ JSONObject pumpMap;
 cocktailList cocktailsAlc, cocktailsNonAlc;
 cocktailTitle title;
 int modus; // 0=Auswahlseite Alk/NonAlk 3=Cocktaildetails 
-int moveX;//Beweg.ges.
+int moveX,moveY;//Beweg.ges.
 int point;   // -1 = Alle Alkoholfreien   0 = Titel    1 = Alkohol
-int x,mouseStart,xStart;
+int x,mouseStartX,mouseStartY,xStart,y;
 
 void setup() {
     //fullScreen();
@@ -16,8 +16,9 @@ void setup() {
     stroke(0,0,0);
     modus = 0;
     moveX=0;
+    moveY=0;
     x=0;
-
+    y=0;
     pumpMap = loadJSONObject("pumpMap.json");
   
     println("Alkohol:");
@@ -31,7 +32,7 @@ void setup() {
 void draw () {  // wird hier nicht gebraucht
     
     background(0);
-    
+    // background(100);
     if (modus == 0) {   // Display Title
       if(x>width) x=width;
       if(x<-width) x=-width;
@@ -39,6 +40,7 @@ void draw () {  // wird hier nicht gebraucht
       title.display(x);
       cocktailsAlc.displayAll(x+width);
       x=x+moveX;
+      y=y+moveY;
       if((x>width) || (x<-width) || ((x>-10)&&(x<10))) moveX=0;
       
      
@@ -54,11 +56,11 @@ void draw () {  // wird hier nicht gebraucht
     }
     
     if (modus == 1 && point==1) {
-       cocktailsAlc.display();
+       cocktailsAlc.display(y);
     }   
     
     if (modus == 1 && point==-1) {
-       cocktailsNonAlc.display();
+       cocktailsNonAlc.display(y);
     }   
 }
 
@@ -76,22 +78,29 @@ void mouseReleased() {
         cocktailsAlc.setFocus(i);
         modus=1;
     }
-      
+   
  }
+ 
+ else if((modus==1) && cocktailsAlc.Bildclicked()) {
+      modus=0;
+    
+    }
 
 }
 
 void mousePressed(){
-  mouseStart=mouseX;
+  mouseStartX=mouseX;
+  mouseStartY=mouseY;
   xStart=x;
 }
 
 void mouseDragged(){
  //x=mouseX-mouseStart+xStart;
-  if((mouseX-mouseStart)>width/4)  moveX=15;
+  if((mouseX-mouseStartX)>width/4)  moveX=20;
+  if((mouseStartX-mouseX)>width/4) moveX=-20;
  
-    
- if((mouseStart-mouseX)>width/4) moveX=-15;
  
+  if((mouseY-mouseStartY)>width/4)  moveY=20;
+  if((mouseStartY-mouseY)>width/4) moveY=-20;
   
 }
