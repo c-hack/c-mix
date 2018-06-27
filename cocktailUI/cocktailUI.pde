@@ -40,7 +40,7 @@ void draw () {  // wird hier nicht gebraucht
       title.display(x);
       cocktailsAlc.displayAll(x+width);
       x=x+moveX;
-      y=y+moveY;
+      
       if((x>width) || (x<-width) || ((x>-10)&&(x<10))) moveX=0;
       
      
@@ -57,10 +57,22 @@ void draw () {  // wird hier nicht gebraucht
     
     if (modus == 1 && point==1) {
        cocktailsAlc.display(y);
+       y=y+moveY;
+        if(y>height) {
+         y=0;
+         modus=0;
+         moveY=0;
+       }
     }   
     
     if (modus == 1 && point==-1) {
        cocktailsNonAlc.display(y);
+       y=y+moveY;
+       if(y>height) {
+         y=0;
+         modus=0;
+         moveY=0;
+       }
     }   
 }
 
@@ -96,11 +108,11 @@ void mousePressed(){
 
 void mouseDragged(){
  //x=mouseX-mouseStart+xStart;
-  if((mouseX-mouseStartX)>width/4)  moveX=20;
-  if((mouseStartX-mouseX)>width/4) moveX=-20;
+  if((mouseX-mouseStartX)>width/4)  moveX=40;
+  if((mouseStartX-mouseX)>width/4) moveX=-40;
  
  
-  if((mouseY-mouseStartY)>width/4)  moveY=20;
-  if((mouseStartY-mouseY)>width/4) moveY=-20;
+  if((mouseY-mouseStartY)>width/4)  moveY=40;
+
   
 }
