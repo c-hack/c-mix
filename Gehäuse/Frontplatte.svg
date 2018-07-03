@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="600mm"
+   height="400mm"
+   viewBox="0 0 600 400"
    version="1.1"
    id="svg821"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.3 (unknown)"
    sodipodi:docname="Frontplatte.svg">
   <defs
      id="defs815" />
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.13995335"
-     inkscape:cx="861.47038"
-     inkscape:cy="578.29013"
+     inkscape:zoom="0.36314062"
+     inkscape:cx="1133.8583"
+     inkscape:cy="755.90551"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -53,58 +53,51 @@
   <g
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(0,103)">
     <rect
        id="rect823"
        width="219.46053"
        height="294.46054"
-       x="0.26973999"
-       y="2.2697191"
-       style="fill:none;stroke:#000000;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none" />
-    <g
-       id="g911"
-       style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;fill:none">
-      <circle
-         r="2"
-         style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;fill:none"
-         cy="147.50151"
-         cx="7.7546415"
-         id="path32" />
-      <circle
-         r="2"
-         style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;fill:none"
-         cy="275.0015"
-         cx="8.0585051"
-         id="path32-9" />
-      <circle
-         r="2"
-         style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;fill:none"
-         cy="20.001501"
-         cx="7.7271147"
-         id="path32-4" />
-    </g>
-    <g
-       transform="translate(204.57289,-0.00149536)"
-       id="g911-5"
-       style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;fill:none">
-      <circle
-         r="2"
-         style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;fill:none"
-         cy="147.50151"
-         cx="7.7546415"
-         id="path32-7" />
-      <circle
-         r="2"
-         style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;fill:none"
-         cy="275.0015"
-         cx="8.0585051"
-         id="path32-9-0" />
-      <circle
-         r="2"
-         style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;fill:none"
-         cy="20.001501"
-         cx="7.7271147"
-         id="path32-4-7" />
-    </g>
+       x="-119.56832"
+       y="4.586813"
+       style="fill:none;stroke:#000000;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="rotate(-90)" />
+    <path
+       transform="rotate(-90)"
+       style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -110.08342,149.8186 a 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 2,2 0 0 1 2,2 z"
+       id="path32" />
+    <path
+       style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;stroke:#000000"
+       d="m -109.77956,277.3186 a 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 2,2 0 0 1 2,2 z"
+       transform="rotate(-90)"
+       id="path32-9" />
+    <path
+       transform="rotate(-90)"
+       style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -110.11095,22.318596 a 2,2 0 0 1 -2,2 2,2 0 0 1 -2,-2 2,2 0 0 1 2,-2 2,2 0 0 1 2,2 z"
+       id="path32-4" />
+    <circle
+       id="path32-7"
+       cx="92.489471"
+       cy="149.81711"
+       style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+       r="2"
+       transform="rotate(-90)" />
+    <circle
+       id="path32-9-0"
+       cx="92.793335"
+       cy="277.31711"
+       style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+       r="2"
+       transform="rotate(-90)" />
+    <circle
+       id="path32-4-7"
+       cx="92.461945"
+       cy="22.317099"
+       style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+       r="2"
+       transform="rotate(-90)" />
   </g>
 </svg>

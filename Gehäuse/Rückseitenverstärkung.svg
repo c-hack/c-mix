@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="600mm"
+   height="400mm"
+   viewBox="0 0 600 400"
    version="1.1"
    id="svg27"
    inkscape:version="0.92.3 (unknown)"
@@ -25,12 +25,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35435943"
-     inkscape:cx="-129.12378"
-     inkscape:cy="560"
+     inkscape:zoom="0.36314062"
+     inkscape:cx="1133.8583"
+     inkscape:cy="755.90551"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
-     showgrid="false" />
+     showgrid="false"
+     inkscape:measure-start="-267.114,1346.59"
+     inkscape:measure-end="24.7838,707.715" />
   <metadata
      id="metadata24">
     <rdf:RDF>
@@ -46,7 +48,8 @@
   <g
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(0,103)">
     <g
        style="stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
        id="g5474"
@@ -56,40 +59,40 @@
        id="rect846"
        width="170.89999"
        height="213.90001"
-       x="6.5245719"
-       y="12.986691"
+       x="4.4079051"
+       y="-99.196709"
        ry="0.00031942214" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.02;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect850"
        width="122.451"
        height="160.53027"
-       x="30.141766"
-       y="40.898212"
+       x="28.025097"
+       y="-71.285187"
        ry="15.679941" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.02;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect846-3"
        width="19.9"
        height="213.90001"
-       x="183.77448"
-       y="12.986691"
+       x="181.65784"
+       y="-99.196709"
        ry="0.00031942214" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.02;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect867"
        width="197.31155"
        height="9.8999996"
-       x="6.5245719"
-       y="233.24686"
+       x="4.4079051"
+       y="121.06495"
        ry="0.00017718135" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.02;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect867-6"
        width="197.31155"
        height="9.8999996"
-       x="6.5245667"
-       y="247.90929"
+       x="4.4078999"
+       y="135.72746"
        ry="0.00017718135" />
   </g>
 </svg>

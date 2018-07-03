@@ -7,10 +7,9 @@ class cocktailList {
   
   int xpos,ypos;
   PImage[] photo = new PImage[8];
+  PImage[] icon = new PImage[8];
   float xph,yph;
   float bildxpos,bildypos,bildsizex,bildsizey;
-  
-     
 
   cocktailList(String filename) {
      rezeptListe = loadJSONArray(filename);  
@@ -28,6 +27,7 @@ class cocktailList {
       rezept = rezeptListe.getJSONArray(i);
       cocktailHeader = rezept.getJSONObject(0);
       photo[i]=loadImage("pics/"+cocktailHeader.getString("Bild"));
+      icon[i]=loadImage("pics/icons/icon."+cocktailHeader.getString("Bild"));
     }
   }
 
@@ -46,7 +46,7 @@ class cocktailList {
       textSize(width/42);
       textAlign(CENTER,TOP);
       text(cocktailHeader.getString("DrinkName"), xpos+xph/2+xOffset, ypos+yph); 
-      image(photo[i],xpos+xOffset,ypos,xph,yph);
+      image(icon[i],xpos+xOffset,ypos-height/15);
       xpos=xpos+width/4;
      
       if(i==3){ypos=height/2; xpos=width/20; }

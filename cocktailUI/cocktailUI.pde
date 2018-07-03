@@ -12,7 +12,7 @@ int x,mouseStartX,mouseStartY,xStart,y;
 
 void setup() {
     //fullScreen();
-    size(800,450);
+    size(800,480);
     stroke(0,0,0);
     modus = 0;
     moveX=0;
