@@ -1,6 +1,7 @@
 //==========================================================
 // cocktailTest            CC3.0 BY-SA-NC   surasto.de
 //==========================================================
+import processing.serial.*;
   
 
 cocktailList cocktailsAlc, cocktailsNonAlc;
@@ -9,6 +10,9 @@ int modus; // 0=Auswahlseite Alk/NonAlk 3=Cocktaildetails
 int moveX,moveY;//Beweg.ges.
 int point;   // -1 = Alle Alkoholfreien   0 = Titel    1 = Alkohol
 int x,mouseStartX,mouseStartY,xStart,y;
+
+Serial cTrone;
+String[] serialInterfaces = new String[100]; 
 
 void setup() {
     //fullScreen();
@@ -26,7 +30,11 @@ void setup() {
     println("Alkoholfrei:");
     cocktailsNonAlc = new cocktailList("cocktailsNonAlc.json");
     title=new cocktailTitle();
-
+    
+    serialInterfaces = Serial.list();         
+    println("Meine-Interfaces:");
+    printArray(serialInterfaces);
+    cTrone = new Serial(this, serialInterfaces[serialInterfaces.length-1], 9600);
 } 
 
 void draw () {  // wird hier nicht gebraucht
@@ -97,7 +105,7 @@ void mouseReleased() {
  
  else if((modus==1) && cocktailsAlc.Bildclicked()) {
       modus=0;
-     cocktailsAlc.mix();
+     cocktailsAlc.mix(cTrone);
     }
 
 }
