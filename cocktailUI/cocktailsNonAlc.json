@@ -18,7 +18,7 @@
     {"Zutat": "Ananassaft", "Menge": 2},
     {"Zutat": "Grapefruitsaft", "Menge": 2},
     {"Zutat": "Orangensaft", "Menge": 2},
-    {"Zutat": "Ginger Ale", "Menge": 12},
+    {"Zutat": "Ginger-Ale", "Menge": 12},
   ],  
   [
     {"DrinkName": "Baby Simly Red", "Bild": "babysimplyred.png"},
@@ -37,13 +37,13 @@
     {"Zutat": "Ananassaft", "Menge": 7.5},
     {"Zutat": "Limettensaft", "Menge": 2.5},
     {"Zutat": "Grenadine", "Menge": 1.5},
-    {"Zutat": "Ginger Ale", "Menge": 5.5},
+    {"Zutat": "Ginger-Ale", "Menge": 5.5},
   ],
   [
     {"DrinkName": "Grapefruit Highball", "Bild": "grapefruithighball.png"},
     {"Zutat": "Grenadine", "Menge": 2.5},
     {"Zutat": "Grapefruitsaft", "Menge": 7.5},
-    {"Zutat": "Ginger Ale", "Menge": 5},
+    {"Zutat": "Ginger-Ale", "Menge": 5},
   ],
   [
     {"DrinkName": "Free Planter's Punch", "Bild": "freeplanterspunch.png"},

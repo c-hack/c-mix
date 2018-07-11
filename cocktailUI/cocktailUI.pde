@@ -2,7 +2,7 @@
 // cocktailTest            CC3.0 BY-SA-NC   surasto.de
 //==========================================================
   
-JSONObject pumpMap;
+
 cocktailList cocktailsAlc, cocktailsNonAlc;
 cocktailTitle title;
 int modus; // 0=Auswahlseite Alk/NonAlk 3=Cocktaildetails 
@@ -19,7 +19,7 @@ void setup() {
     moveY=0;
     x=0;
     y=0;
-    pumpMap = loadJSONObject("pumpMap.json");
+    
   
     println("Alkohol:");
     cocktailsAlc = new cocktailList("cocktailsAlc.json");
@@ -73,7 +73,9 @@ void draw () {  // wird hier nicht gebraucht
          modus=0;
          moveY=0;
        }
-    }   
+    } 
+   
+   // cocktailsNonAlc.mix();
 }
 
 
@@ -95,7 +97,7 @@ void mouseReleased() {
  
  else if((modus==1) && cocktailsAlc.Bildclicked()) {
       modus=0;
-    
+     cocktailsAlc.mix();
     }
 
 }
@@ -110,8 +112,6 @@ void mouseDragged(){
  //x=mouseX-mouseStart+xStart;
   if((mouseX-mouseStartX)>width/4)  moveX=40;
   if((mouseStartX-mouseX)>width/4) moveX=-40;
- 
- 
   if((mouseY-mouseStartY)>width/4)  moveY=40;
 
   

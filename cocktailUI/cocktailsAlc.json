@@ -15,14 +15,14 @@
   [
     {"DrinkName": "Havana Cooler" , "Bild": "havanacooler.png"},
     {"Zutat": "Rum", "Menge" :1.4 },
-    {"Zutat": "Ginger Ale", "Menge": 6.2},
+    {"Zutat": "Ginger-Ale", "Menge": 6.2},
   ],
   [
     {"DrinkName": "Havana Beach" , "Bild" : "havanabeach.png"},
     {"Zutat": "Rum" , "Menge" : 3.3},
     {"Zutat": "Limettensaft", "Menge" : 3.3},
     {"Zutat": "Ananassaft" , "Menge" : 6.6},
-    {"Zutat": "Ginger Ale" , "Menge" : 6.6},
+    {"Zutat": "Ginger-Ale" , "Menge" : 6.6},
   ],
   [
     {"DrinkName": "Bahama Bay" , "Bild": "bahamabay.png"},
@@ -48,7 +48,7 @@
   [
     {"DrinkName": "PiGiVo" , "Bild" : "pigivo.png"},
     {"Zutat" : "Ananassaft" , "Menge" : 6},
-    {"Zutat" : "Ginger Ale" , "Menge" : 6},
+    {"Zutat" : "Ginger-Ale" , "Menge" : 6},
     {"Zutat" : "Wodka" , "Menge" : 3.5},
     {"Zutat" : "Orangensaft" , "Menge" : 1.5},
   ]

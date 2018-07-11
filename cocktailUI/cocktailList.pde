@@ -1,9 +1,12 @@
+import processing.serial.*;
 class cocktailList {
   
   JSONArray rezeptListe;
   JSONArray rezept;
   JSONObject cocktailHeader, cocktailZutat;
   int cocktailInFocus;
+  JSONObject pumpMap;
+  Serial cTrone;
   
   int xpos,ypos;
   PImage[] photo = new PImage[8];
@@ -13,10 +16,12 @@ class cocktailList {
 
   cocktailList(String filename) {
      rezeptListe = loadJSONArray(filename);  
+     pumpMap = loadJSONObject("pumpMap.json");
      cocktailInFocus = 0;
      xph=height/3.5;   //Bildgröße für Icon
      yph=height/3.5;
-     
+     println("Meine-...");
+     print(Serial.list());
       bildsizex=width/2.5;     //Cocktail display
       bildsizey=width/2.5;
       bildxpos=width/2+bildsizex/4;
@@ -68,7 +73,7 @@ class cocktailList {
       float rectx,recty;
 
        rezept = rezeptListe.getJSONArray(cocktailInFocus);
-      cocktailHeader = rezept.getJSONObject(0);
+       cocktailHeader = rezept.getJSONObject(0);
       //println("Cocktail: ",cocktailHeader.getString("DrinkName"));
        
        /**/bild=loadImage("pics/"+cocktailHeader.getString("Bild"));
@@ -135,4 +140,27 @@ class cocktailList {
   int getButtonClicked() {
     return 0;
   }
+  
+  void mix(){
+      String zutat;
+      float menge;
+      int pmp;
+
+       rezept = rezeptListe.getJSONArray(cocktailInFocus);
+        //Zutat
+      
+       for(int i=1;i<rezept.size();i++){
+        cocktailZutat = rezept.getJSONObject(i);
+        zutat=cocktailZutat.getString("Zutat");
+        menge=cocktailZutat.getFloat("Menge");
+        //pumpMap = loadJSONObject("pumpMap.json");
+      pmp= pumpMap.getInt(zutat);
+        println(zutat+" "+menge+" "+"nrpump="+pmp);
+        
+       }
+  
+    
+    
+  }
+  
 }
