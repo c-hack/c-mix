@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="600mm"
+   height="400mm"
+   viewBox="0 0 600 400"
+   version="1.1"
+   id="svg821"
+   inkscape:version="0.92.3 (unknown)"
+   sodipodi:docname="Rückwand.svg">
+  <defs
+     id="defs815" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.66181846"
+     inkscape:cx="905.91697"
+     inkscape:cy="1088.1977"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:measure-start="108.645,663.309"
+     inkscape:measure-end="108.359,690.184"
+     inkscape:window-width="1366"
+     inkscape:window-height="715"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata818">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,103)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.07559055;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 19.005859 19.142578 L 19.005859 848.59961 L 1486.7617 848.59961 L 1486.7617 829.77734 L 1792.8281 829.77734 L 1792.8281 37.964844 L 1486.7617 37.964844 L 1486.7617 19.142578 L 19.005859 19.142578 z "
+       transform="matrix(0.26458333,0,0,0.26458333,0,-103)"
+       id="rect823" />
+    <g
+       id="g911"
+       style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="rotate(90,199.98179,101.77686)">
+      <circle
+         r="2"
+         style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+         cy="147.50151"
+         cx="7.7546415"
+         id="path32" />
+      <circle
+         r="2"
+         style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+         cy="275.0015"
+         cx="8.0585051"
+         id="path32-9" />
+      <circle
+         r="2"
+         style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+         cy="20.001501"
+         cx="7.7271147"
+         id="path32-4" />
+    </g>
+    <g
+       transform="rotate(90,97.696093,204.06405)"
+       id="g911-5"
+       style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none">
+      <circle
+         r="2"
+         style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+         cy="147.50151"
+         cx="7.7546415"
+         id="path32-7" />
+      <circle
+         r="2"
+         style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+         cy="275.0015"
+         cx="8.0585051"
+         id="path32-9-0" />
+      <circle
+         r="2"
+         style="fill:none;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none"
+         cy="20.001501"
+         cx="7.7271147"
+         id="path32-4-7" />
+    </g>
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.02;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path107"
+       cx="403.18051"
+       cy="76.320152"
+       r="10" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.02;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path107-6"
+       cx="403.38037"
+       cy="-54.008892"
+       r="10" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.02;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path107-7"
+       cx="23.973688"
+       cy="83.529503"
+       r="3.99" />
+  </g>
+</svg>
