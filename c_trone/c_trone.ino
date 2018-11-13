@@ -10,6 +10,7 @@
 int count;           // The actual number of measured turns
 int oldRelayState;
 int turns = 5;       // The number of turns received from Raspi (default is 5) 
+String serialBuffer = "";   // This buffer holds the Serial Commands
 
 void setup() {
   Serial.begin(9600);
@@ -27,18 +28,34 @@ void setup() {
 }
 
 void loop() {
-  char c;
+  char c=' ';
+  char m;    // Motor Index
   int motor;  
+  String motorTurns;
   
   if (Serial.available()) {
     c = Serial.read();
-    motor = c - '0' + 1;   // +1 because the first motor starts with 2
+    serialBuffer += c;
+  }
+
+  if (c == '\n') {
+    //Serial.println(serialBuffer);
+    motorTurns = serialBuffer.substring(2);
+    turns = motorTurns.toInt();
+    m = serialBuffer.charAt(0);
+
+    motor = m - '0' + 1;   // +1 because the first motor starts with 2
     Serial.print("Motortreiber: ");
     Serial.println(motor);
+    Serial.print("Umdrehungen: ");
+    Serial.println(turns);
 
     if ((motor > 1) && (motor < 10)) digitalWrite(motor,HIGH);
     if (motor < 2) allMotorsOff();  
+
+    serialBuffer="";
   }
+
   if ((oldRelayState == 1) && (digitalRead(A0) == 0)) {
     count++;
     Serial.println(count);

@@ -144,9 +144,14 @@ class cocktailList {
       float menge;
       int pmp;
       int c;
+      float pmpCal=0;
+      int turns;
+      String command;
       
        rezept = rezeptListe.getJSONArray(cocktailInFocus);
         //Zutat
+        
+       pmpCal = pumpMap.getFloat("PumpCalibration");
       
        for(int i=1;i<rezept.size();i++){
          cocktailZutat = rezept.getJSONObject(i);
@@ -155,13 +160,22 @@ class cocktailList {
          //pumpMap = loadJSONObject("pumpMap.json");
          pmp= pumpMap.getInt(zutat);
          println(zutat+" "+menge+" "+"nrpump="+pmp);
-         s.write(zutat);
-         s.write("\n");
-  //       while (s.available() == 0) print(".");
-  //       c=s.read();
-       }
+         
+         turns = int(menge * pmpCal);
+         println(pmp,turns);
+         
+         command = "" + pmp + "," + turns + "\n";
+         println(command);
+         s.write(command);   // send to ctrone
+         
+         c=' ';
+         while (c != '*') {
+           print(".");
+           if (s.available() > 0) c=s.read();
+           delay(10);
+         }
   
-    
+       }   
     
   }
   
