@@ -11,6 +11,9 @@ int moveX,moveY;//Beweg.ges.
 int point;   // -1 = Alle Alkoholfreien   0 = Titel    1 = Alkohol
 int x,mouseStartX,mouseStartY,xStart,y;
 
+int hotspotCount;   // Ausschalthack
+long frames=0;      // Zählt die Frames seit dem letzten hotspot touch
+
 Serial cTrone;
 String[] serialInterfaces = new String[100]; 
 
@@ -85,6 +88,7 @@ void draw () {  // wird hier nicht gebraucht
     } 
    
    // cocktailsNonAlc.mix();
+   frames++;
 }
 
 
@@ -102,12 +106,13 @@ void mouseReleased() {
         modus=1;
     }
    
- }
- 
- else if((modus==1) && cocktailsAlc.Bildclicked()) {
+ } else if((modus==1) && cocktailsAlc.Bildclicked()) {
       modus=0;
      cocktailsAlc.mix(cTrone);
-    }
+ } else if (point == 0) {     // Check if the right sequence is hit and shutdown c-mix
+   hotspotCount = checkHotspot(hotspotCount);
+   if (hotspotCount > 2) exit();
+ }  
 
 }
 
@@ -122,6 +127,30 @@ void mouseDragged(){
   if((mouseX-mouseStartX)>width/4)  moveX=40;
   if((mouseStartX-mouseX)>width/4) moveX=-40;
   if((mouseY-mouseStartY)>width/4)  moveY=40;
+}
 
-  
+//==================================================
+// Check fror switch-off sequence
+//   1. Hit the drink in the glass
+//   2. hit the bottom stand of teh glass
+//   3. Hit the center of the "X" in C-MIX
+//==================================================
+int checkHotspot(int h) {
+  if ((hotspotCount == 0) && mouseAt(440,165)) {
+    h=1;
+    frames = 0;
+  } else 
+  if ((hotspotCount == 1) && mouseAt(440,272) && (frames < 1000)) {
+    h=2;
+    frames = 0;
+  } else
+  if ((hotspotCount == 2) && mouseAt(476,225) && (frames < 1000)) {
+    h=3;
+    frames = 0;
+  } else h=0;
+  return(h);
+}
+
+boolean mouseAt(int x, int y) {
+  if ((mouseX < x+20) && (mouseX > x-20) && (mouseY < y+20) && (mouseY > y-20)) return(true); else return(false);  
 }
