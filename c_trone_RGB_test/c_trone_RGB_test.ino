@@ -10,6 +10,8 @@
 #define BLUE  0b00000000111101110110000011011111
 #define RED   0b00000000111101110010000011011111
 #define GREEN 0b00000000111101111010000001011111
+#define ON    0b00000000111101111100000000111111
+#define OFF   0b00000000111101110100000010111111
 
 
 void setup() {
@@ -18,12 +20,17 @@ void setup() {
 }
 
 void loop() {
+  send32Binary(ON);
+  delay(1000);
   send32Binary(BLUE);
   delay(1000);
   send32Binary(RED);
   delay(1000);
   send32Binary(GREEN);
-  delay(1000); 
+  delay(1000);
+  send32Binary(OFF);
+  delay(2000);
+ 
 }
 
 void send32Binary(uint32_t value) {
