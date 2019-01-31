@@ -2,7 +2,8 @@
 // cocktailTest            CC3.0 BY-SA-NC   surasto.de
 //==========================================================
 import processing.serial.*;
-  
+
+final int DIAG = -1;   // System is in diagnostic mode
 
 cocktailList cocktailsAlc, cocktailsNonAlc;
 cocktailTitle title;
@@ -16,6 +17,8 @@ long frames=0;      // Zählt die Frames seit dem letzten hotspot touch
 
 Serial cTrone;
 String[] serialInterfaces = new String[100]; 
+
+diagMode diag = new diagMode();
 
 void setup() {
     //fullScreen();
@@ -86,6 +89,10 @@ void draw () {  // wird hier nicht gebraucht
          moveY=0;
        }
     } 
+    
+    if (modus == DIAG) {
+      diag.updateDisplay();
+    }
    
    // cocktailsNonAlc.mix();
    frames++;
@@ -94,6 +101,8 @@ void draw () {  // wird hier nicht gebraucht
 
 void mouseReleased() {
   int i;
+  int pressed;
+  
  if((modus==0) && (point!=0 )) {
     i= cocktailsAlc.getNrClicked();
     if((i>-1) && (point==-1)) { 
@@ -111,9 +120,15 @@ void mouseReleased() {
      cocktailsAlc.mix(cTrone);
  } else if (point == 0) {     // Check if the right sequence is hit and shutdown c-mix
    hotspotCount = checkHotspot(hotspotCount);
-   if (hotspotCount > 2) exit();
- }  
-
+   if (hotspotCount > 2) modus = DIAG;;
+ }
+ 
+ if (modus == DIAG) {
+   pressed = diag.checkKnobPressed(mouseX, mouseY);
+   if (pressed == 9) modus = 0;
+   if (pressed == 10) exit();
+   if ((pressed > 0) && (pressed < 9)) diag.runPump(cTrone,pressed);
+ }
 }
 
 void mousePressed(){
@@ -130,7 +145,7 @@ void mouseDragged(){
 }
 
 //==================================================
-// Check fror switch-off sequence
+// Check fror Diagnostic sequence
 //   1. Hit the drink in the glass
 //   2. hit the bottom stand of teh glass
 //   3. Hit the center of the "X" in C-MIX
