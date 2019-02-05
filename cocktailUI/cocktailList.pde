@@ -154,6 +154,8 @@ class cocktailList {
         
        pmpCal = pumpMap.getFloat("PumpCalibration");
       
+       s.write("LB \n");   // Glasbeleuchtung
+      
        for(int i=1;i<rezept.size();i++){
          cocktailZutat = rezept.getJSONObject(i);
          zutat=cocktailZutat.getString("Zutat");
@@ -176,7 +178,9 @@ class cocktailList {
            delay(10);
          }
   
-       }   
+       }
+       s.write("LX \n");   // Glasbeleuchtung aus
+
     
   }
   
