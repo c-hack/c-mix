@@ -148,6 +148,7 @@ class cocktailList {
       int turns;
       String command;
       
+      println("Cocktail: ",cocktailInFocus);
        rezept = rezeptListe.getJSONArray(cocktailInFocus);
         //Zutat
         

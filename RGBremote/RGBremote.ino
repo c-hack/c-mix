@@ -7,8 +7,10 @@ void setup() {
 
 void loop() {
   rgb.sendCode(ON);
-  delay(1000);
+  delay(1);
   rgb.sendCode(PINK);
+  delay(1000);
+  rgb.sendCode(RED);
   delay(1000);
   rgb.sendCode(OFF);
   delay(2000);

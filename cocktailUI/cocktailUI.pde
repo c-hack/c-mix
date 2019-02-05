@@ -116,8 +116,9 @@ void mouseReleased() {
     }
    
  } else if((modus==1) && cocktailsAlc.Bildclicked()) {
-      modus=0;
-     cocktailsAlc.mix(cTrone);
+     modus=0;
+     if (point == -1) cocktailsNonAlc.mix(cTrone);
+     else cocktailsAlc.mix(cTrone);
  } else if (point == 0) {     // Check if the right sequence is hit and shutdown c-mix
    hotspotCount = checkHotspot(hotspotCount);
    if (hotspotCount > 2) modus = DIAG;;
