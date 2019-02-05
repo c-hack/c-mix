@@ -24,7 +24,7 @@ class diagMode {
       fill(0);
       if (i == activePumpNr) fill(255);
       textSize(40);
-      text(i,x+37,100);
+      text(9-i,x+37,100);
       x+=95;
       if (i==4) x+=20;
     }
@@ -48,8 +48,8 @@ class diagMode {
     
     for (int i=1; i<9; i++) {
       if ((a < x+75) && (a > x) && (b>60) && (b<60+50)) {
-        pressed = i;
-        activePumpNr = i;
+        pressed = 9-i;
+        activePumpNr = 9-i;
       }
       x+=95;
     }  

@@ -40,8 +40,8 @@ void setup() {
     serialInterfaces = Serial.list();         
     println("Meine-Interfaces:");
     printArray(serialInterfaces[serialInterfaces.length-1]);
-    cTrone = new Serial(this, serialInterfaces[serialInterfaces.length-1], 9600);
-    cTrone.write("c-mix ready\n");
+ //   cTrone = new Serial(this, serialInterfaces[serialInterfaces.length-1], 9600);
+ //   cTrone.write("c-mix ready\n");
 } 
 
 void draw () {  // wird hier nicht gebraucht
