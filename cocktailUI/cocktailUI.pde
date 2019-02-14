@@ -7,6 +7,8 @@ final int DIAG = -1;   // System is in diagnostic mode
 
 cocktailList cocktailsAlc, cocktailsNonAlc;
 cocktailTitle title;
+diagMode diag;
+
 int modus; // 0=Auswahlseite Alk/NonAlk 3=Cocktaildetails 
 int moveX,moveY;//Beweg.ges.
 int point;   // -1 = Alle Alkoholfreien   0 = Titel    1 = Alkohol
@@ -18,10 +20,10 @@ long frames=0;      // Zählt die Frames seit dem letzten hotspot touch
 Serial cTrone;
 String[] serialInterfaces = new String[100]; 
 
-diagMode diag = new diagMode();
 
 void setup() {
     //fullScreen();
+    //noCursor();
     size(800,480);
     stroke(0,0,0);
     modus = 0;
@@ -29,8 +31,9 @@ void setup() {
     moveY=0;
     x=0;
     y=0;
-    
   
+    diag = new diagMode(); 
+     
     println("Alkohol:");
     cocktailsAlc = new cocktailList("cocktailsAlc.json");
     println("Alkoholfrei:");
@@ -44,10 +47,9 @@ void setup() {
     cTrone.write("c-mix ready\n");
 } 
 
-void draw () {  // wird hier nicht gebraucht
+void draw () { 
     
     background(0);
-    // background(100);
     if (modus == 0) {   // Display Title
       if(x>width) x=width;
       if(x<-width) x=-width;
@@ -139,14 +141,13 @@ void mousePressed(){
 }
 
 void mouseDragged(){
- //x=mouseX-mouseStart+xStart;
   if((mouseX-mouseStartX)>width/4)  moveX=40;
   if((mouseStartX-mouseX)>width/4) moveX=-40;
   if((mouseY-mouseStartY)>width/4)  moveY=40;
 }
 
 //==================================================
-// Check fror Diagnostic sequence
+// Check for Diagnostic sequence
 //   1. Hit the drink in the glass
 //   2. hit the bottom stand of teh glass
 //   3. Hit the center of the "X" in C-MIX
