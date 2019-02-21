@@ -48,6 +48,8 @@ void loop() {
       lightColor = serialBuffer.charAt(1);
       rgb.sendCode(ON);
       delay(1);
+      Serial.print("Licht: ");
+      Serial.print(lightColor);
       switch (lightColor) {
         case 'R': rgb.sendCode(RED); break;
         case 'G': rgb.sendCode(GREEN); break;
