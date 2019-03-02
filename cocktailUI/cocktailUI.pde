@@ -1,5 +1,6 @@
 //==========================================================
 // cocktailTest            CC3.0 BY-SA-NC   surasto.de
+// Finale Wischgesten
 //==========================================================
 import processing.serial.*;
 
@@ -22,9 +23,9 @@ String[] serialInterfaces = new String[100];
 
 
 void setup() {
-    //fullScreen();
-    //noCursor();
-    size(800,480);
+    fullScreen();
+    noCursor();
+    //size(800,480);
     stroke(0,0,0);
     modus = 0;
     moveX=0;
@@ -58,10 +59,7 @@ void draw () {
       cocktailsAlc.displayAll(x+width);
       x=x+moveX;
       
-      if((x>width) || (x<-width) || ((x>-10)&&(x<10))) {
-        moveX=0;
-        moveY=0;
-      }
+      if((x>width) || (x<-width) || ((x>-10)&&(x<10))) moveX=0;
       
      
       fill(255);stroke(255);
@@ -109,8 +107,10 @@ void draw () {
 void mouseReleased() {
   int i;
   int pressed;
-  
- if((modus==0) && (point!=0 )) {
+
+  if((modus==0) && (point!=0 )) {
+    moveX=0;
+    moveY=0;
     i= cocktailsAlc.getNrClicked();
     if((i>-1) && (point==-1)) { 
       cocktailsNonAlc.setFocus(i);
@@ -140,16 +140,19 @@ void mouseReleased() {
 }
 
 void mousePressed(){
+  println("pressed...");
   mouseStartX=mouseX;
   mouseStartY=mouseY;
   xStart=x;
-  println("pressed");
+  moveX=0;
 }
 
 void mouseDragged(){
+  println("dragged...");
   if((mouseX-mouseStartX)>width/4)  moveX=40;
   if((mouseStartX-mouseX)>width/4) moveX=-40;
   if((mouseY-mouseStartY)>height/4)  moveY=40;
+
 }
 
 //==================================================
@@ -159,6 +162,7 @@ void mouseDragged(){
 //   3. Hit the center of the "X" in C-MIX
 //==================================================
 int checkHotspot(int h) {
+
   if ((hotspotCount == 0) && mouseAt(440,165)) {
     h=1;
     frames = 0;
