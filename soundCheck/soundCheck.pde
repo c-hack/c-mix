@@ -18,25 +18,37 @@ void setup() {
   // Create the envelope 
   env  = new Env(this); 
  
-  playFanfare();
+  //playFanfare();
+  playSong("c1_5,e1_5,g1_3,e1_5,g1_5,c2_1");
+  
 }      
 
 void draw() {
+}
+
+void playSong(String s) {
+  String n="",z="";
+  float noteLength;
+  
+  for (int i = 0; i < s.length(); i = i+5) {
+    n= s.substring (i,i+2);
+    z= s.substring (i+3,i+4);
+    noteLength = float (z);
+    println(n,z);
+    playNote (n,noteLength);
+  }
 }
 
 void playNote(String n, float fraction) {
   float f=50;
   int d;
  
-  
   sustainTime=0.4/fraction;
   println (releaseTime);
-  
-  
   switch (n) {
-    case "g": f=195.998; break;
-    case "a": f=220.000; break;
-    case "h": f=246.942; break;
+    case "g0": f=195.998; break;
+    case "a0": f=220.000; break;
+    case "h0": f=246.942; break;
     case "c1": f=261.626; break;
     case "d1": f=293.665; break;
     case "e1": f=329.628; break;
@@ -51,25 +63,6 @@ void playNote(String n, float fraction) {
   Osc.freq(f);
   Osc.play();
   env.play(Osc, attackTime, sustainTime, sustainLevel, releaseTime);
-  d = int((attackTime + sustainTime + releaseTime) * 1000); 
+  d = int((attackTime + sustainTime + releaseTime)*500); 
   delay(d);
-}
-
-void playFanfare() {
-  playNote("c1",4);
-  playNote("d1",4);
-  playNote("e1",4);
-  playNote("f1",4);
-  playNote("g1",1);
-  playNote("g1",1);
-  playNote("a1",4);
-  playNote("a1",4);
-  playNote("a1",4);
-  playNote("a1",4);
-  playNote("g1",1);
-  playNote("a1",4);
-  playNote("a1",4);
-  playNote("a1",4);
-  playNote("g1",1);
-  
 }
