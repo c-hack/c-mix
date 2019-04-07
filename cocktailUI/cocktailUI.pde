@@ -2,6 +2,7 @@
 // cocktailTest            CC3.0 BY-SA-NC   surasto.de
 // Finale Wischgesten
 //==========================================================
+import ddf.minim.*;  // Audio Library
 import processing.serial.*;
 
 final int DIAG = -1;   // System is in diagnostic mode
@@ -9,6 +10,9 @@ final int DIAG = -1;   // System is in diagnostic mode
 cocktailList cocktailsAlc, cocktailsNonAlc;
 cocktailTitle title;
 diagMode diag;
+
+Minim minim;           //Audio
+AudioPlayer player;
 
 int modus; // 0=Auswahlseite Alk/NonAlk 3=Cocktaildetails 
 int moveX,moveY;//Beweg.ges.
@@ -21,11 +25,10 @@ long frames=0;      // Zählt die Frames seit dem letzten hotspot touch
 Serial cTrone;
 String[] serialInterfaces = new String[100]; 
 
-
 void setup() {
     fullScreen();
     noCursor();
-    size(800,480);
+//    size(800,480);     // Only used for test on the PC
     stroke(0,0,0);
     modus = 0;
     moveX=0;
@@ -34,7 +37,10 @@ void setup() {
     y=0;
   
     diag = new diagMode(); 
-     
+
+    minim = new Minim(this);
+    player = minim.loadFile("marimba.mp3");   // Jingle after mixing
+      
     println("Alkohol:");
     cocktailsAlc = new cocktailList("cocktailsAlc.json");
     println("Alkoholfrei:");
@@ -99,7 +105,6 @@ void draw () {
       diag.updateDisplay();
     }
    
-   // cocktailsNonAlc.mix();
    frames++;
 }
 
@@ -124,8 +129,14 @@ void mouseReleased() {
    
  } else if((modus==1) && cocktailsAlc.Bildclicked()) {
      modus=0;
-     if (point == -1) cocktailsNonAlc.mix(cTrone);
-     else cocktailsAlc.mix(cTrone);
+     if (point == -1) {                
+        cocktailsNonAlc.mix(cTrone);    // Mix non-alcoholic cocktails
+        player.play();                  // Play jingle when finished
+      }
+     else {
+        cocktailsAlc.mix(cTrone);       // Mix alcoholic cocktails
+        player.play();                  // Play jingle when finished
+     }
  } else if (point == 0) {     // Check if the right sequence is hit and shutdown c-mix
    hotspotCount = checkHotspot(hotspotCount);
    if (hotspotCount > 2) modus = DIAG;;
