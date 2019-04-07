@@ -25,7 +25,7 @@ String[] serialInterfaces = new String[100];
 void setup() {
     fullScreen();
     noCursor();
-    //size(800,480);
+    size(800,480);
     stroke(0,0,0);
     modus = 0;
     moveX=0;

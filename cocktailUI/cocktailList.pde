@@ -23,7 +23,8 @@ class cocktailList {
      bildsizex=width/2.5;     //Cocktail display
      bildsizey=width/2.5;
      bildxpos=width/2+bildsizex/4;
-     bildypos=height/4.5;
+//     bildypos=height/4.5;
+     bildypos = -50;
      
      // Alle Bilder laden
      for (int i=0; (i<rezeptListe.size())&&(i<8); i++) {
@@ -71,7 +72,7 @@ class cocktailList {
      //println("Cocktail: ",cocktailHeader.getString("DrinkName"));
      
      bild=loadImage("pics/"+cocktailHeader.getString("Bild"));
-     image(bild,bildxpos,bildypos+yOffset,bildsizex,bildsizey);
+     image(bild,bildxpos,bildypos+yOffset);   //,bildsizex,bildsizey);
 
      //Drinkname
      drinknamex=width/4;
